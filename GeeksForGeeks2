@@ -1,0 +1,25 @@
+# logic to find if the array is sorted or not
+# previous element is checked with the current element logic is used.
+ArrayList<Integer> ans = new ArrayList<>();
+        ans.add(6);
+        ans.add(7);
+        ans.add(8);
+        ans.add(9);
+        try {
+            System.out.println(check(ans, 5));
+        } catch (Exception e){
+            System.out.println("something went wrong");
+        }
+
+    }
+
+    public static boolean check(ArrayList<Integer> arr, int n){
+
+        int prev = arr.get(0);
+        for(int current: arr){
+            if(prev<current) {
+                return true;
+            }
+        }
+        return false;
+    }
